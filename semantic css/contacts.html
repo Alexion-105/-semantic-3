@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Контакты — SmartLine</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="ui inverted borderless menu top fixed">
+    <div class="ui container">
+      <a href="index.html" class="header item brand">SmartLine</a>
+      <a href="index.html" class="item">Главная</a>
+      <a href="about.html" class="item">О компании</a>
+      <a href="team.html" class="item">Команда</a>
+      <a href="blog.html" class="item">Продукты</a>
+      <a href="contacts.html" class="item active">Контакты</a>
+      <div class="right menu"><div class="item"><button class="ui primary button">Подключиться</button></div></div>
+    </div>
+  </div>
+
+  <div class="ui container" style="padding-top:5.5rem;">
+    <h1 class="ui header" data-aos="fade-up">Контакты</h1>
+    <div class="ui stackable grid">
+      <div class="eight wide column" data-aos="fade-right">
+        <h3 class="ui header">Связаться с нами</h3>
+        <p><strong>Телефон:</strong> +7 (700) 123-45-67</p>
+        <p><strong>Email:</strong> info@smartline.kz</p>
+        <p><strong>Адрес:</strong> г. Алматы, пр. Абая, 25</p>
+
+        <h4 class="ui dividing header">Форма обратной связи</h4>
+        <form id="contactForm" class="ui form" onsubmit="return submitForm(event)">
+          <div class="field">
+            <label>Имя</label>
+            <input type="text" id="name" placeholder="Ваше имя" required>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Ваш email" required>
+          </div>
+          <div class="field">
+            <label>Сообщение</label>
+            <textarea id="message" placeholder="Введите сообщение..." required></textarea>
+          </div>
+          <button class="ui primary button" type="submit">Отправить</button>
+          <div id="formMsg" style="margin-top:0.8rem;"></div>
+        </form>
+      </div>
+
+      <div class="eight wide column" data-aos="fade-left">
+        <h3 class="ui header">Карта</h3>
+        <iframe src="https://maps.google.com/maps?q=Алматы,+проспект+Абая,+25&output=embed" width="100%" height="420" style="border:0;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer class="ui inverted vertical segment" style="margin-top:2.5rem;">
+    <div class="ui container center aligned">© 2025 SmartLine</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 700 });
+
+    function submitForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const out = document.getElementById('formMsg');
+
+      if(!name || !email || !msg){
+        out.innerHTML = '<div class="ui negative message">Заполните все поля.</div>';
+        return false;
+      }
+
+      // Здесь можно выполнить отправку через fetch/ajax на сервер.
+      // Пока — показываем благодарность (имитация отправки).
+      out.innerHTML = '<div class="ui positive message">Спасибо, ваше сообщение отправлено. Мы свяжемся в течение рабочего дня.</div>';
+      document.getElementById('contactForm').reset();
+      return false;
+    }
+  </script>
+</body>
+</html>

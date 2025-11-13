@@ -1,0 +1,59 @@
+/* style.css — SmartLine theme */
+:root{
+  --accent: #0b5f4a;
+  --accent-2: #18a893;
+  --muted: #6b7280;
+}
+
+/* Reset small */
+body{ font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#f7f8fb; color:#1b1b1b; }
+.ui.menu.top.fixed { border-radius: 0; box-shadow: 0 2px 8px rgba(11,95,74,0.06); }
+.brand { font-weight:700; font-size:1.2rem; color: var(--accent) !important; }
+
+/* HERO */
+.hero{
+  position: relative;
+  background-image: linear-gradient(120deg, rgba(11,95,74,0.85), rgba(24,168,147,0.7)), url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 5.5rem 0 3.5rem;
+  overflow: hidden;
+}
+.hero .overlay{ position:absolute; inset:0; mix-blend-mode:multiply; }
+.hero-content { padding: 3rem 0; text-align:center; max-width:900px; margin:0 auto; }
+.hero .lead { color: rgba(255,255,255,0.9); margin-bottom:1.4rem; font-size:1.125rem; }
+
+/* hero wave decorative */
+.hero-wave{
+  position:absolute; left:0; right:0; bottom:-2px; height:80px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.9));
+  transform: skewY(-2deg);
+  opacity: 0.6;
+}
+
+/* Section spacing */
+.section{ padding: 3rem 0; }
+.ui.vertical.stripe.segment{ padding: 3rem 0; }
+
+/* Cards */
+.hover-card{ transition: transform .35s cubic-bezier(.2,.9,.3,1), box-shadow .25s; border-radius:8px; }
+.hover-card:hover{ transform: translateY(-8px); box-shadow: 0 12px 28px rgba(13,38,63,0.12); }
+
+/* Product cards */
+.product-card img{ height:160px; object-fit:cover; border-top-left-radius:8px; border-top-right-radius:8px; }
+
+/* CTA */
+.contact-cta{ background: linear-gradient(90deg,var(--accent),var(--accent-2)); color:#fff; padding:2.5rem 0; margin-top:2rem; border-radius:6px; }
+.contact-cta .ui.button { background:rgba(255,255,255,0.12); border:0; color:#fff; }
+
+/* Footer */
+footer.ui.inverted.vertical.segment{ background:#041723; color:rgba(255,255,255,0.85); padding:2.5rem 0; margin-top:2.5rem; }
+footer h4{ color:#fff; }
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+  .hero { padding: 4rem 0 2rem; }
+  .hero .lead{ font-size:1rem; }
+  .hero-wave{ display:none; }
+}

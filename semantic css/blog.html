@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Продукты и новости — SmartLine</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="ui inverted borderless menu top fixed">
+    <div class="ui container">
+      <a href="index.html" class="header item brand">SmartLine</a>
+      <a href="index.html" class="item">Главная</a>
+      <a href="about.html" class="item">О компании</a>
+      <a href="team.html" class="item">Команда</a>
+      <a href="blog.html" class="item active">Продукты</a>
+      <a href="contacts.html" class="item">Контакты</a>
+      <div class="right menu"><div class="item"><button class="ui primary button">Подключиться</button></div></div>
+    </div>
+  </div>
+
+  <div class="ui container" style="padding-top:5.5rem;">
+    <h1 class="ui header" data-aos="fade-up">Новости и продукты</h1>
+    <p data-aos="fade-up" data-aos-delay="100">Актуальные релизы, акции и описания продуктов SmartLine.</p>
+
+    <!-- PRODUCTS GRID -->
+    <div class="ui three stackable cards" style="margin-top:1.2rem;">
+      <article class="card" data-aos="fade-up" data-aos-delay="100">
+        <div class="image"><img src="./images/BCO.d801bf72-2b62-4804-9f7f-1867b33d9d9c.png" alt="SmartOffice"></div>
+        <div class="content">
+          <div class="header">SmartOffice</div>
+          <div class="meta">Облачные инструменты</div>
+          <div class="description">Пакет сервисов для совместной работы. Гибкие тарифы и высокий уровень шифрования.</div>
+        </div>
+        <div class="extra content"><a class="ui button">Читать</a></div>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="150">
+        <div class="image"><img src="./images/Без названия 2.png" alt="SmartTV+"></div>
+        <div class="content">
+          <div class="header">SmartTV+</div>
+          <div class="meta">Медиа и развлечения</div>
+          <div class="description">Платформа с контентом, стримингом и локальными каналами.</div>
+        </div>
+        <div class="extra content"><a class="ui button">Читать</a></div>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="200">
+        <div class="image"><img src="./images/Без названия (4).jpg" alt="SmartCloud"></div>
+        <div class="content">
+          <div class="header">SmartCloud</div>
+          <div class="meta">Инфраструктура</div>
+          <div class="description">Резервные площадки, отказоустойчивые кластеры и SLA до 99.99%.</div>
+        </div>
+        <div class="extra content"><a class="ui button">Читать</a></div>
+      </article>
+    </div>
+
+    <!-- NEWS LIST -->
+    <div class="ui divided items" style="margin-top:2rem;">
+      <div class="item" data-aos="fade-right">
+        <div class="content">
+          <a class="header">Релиз SmartCloud — ноябрь 2025</a>
+          <div class="meta">12 ноября 2025</div>
+          <div class="description">Запущены новые тарифы для малого и среднего бизнеса.</div>
+        </div>
+      </div>
+
+      <div class="item" data-aos="fade-right" data-aos-delay="100">
+        <div class="content">
+          <a class="header">Партнёрство с локальным ЦОД</a>
+          <div class="meta">3 ноября 2025</div>
+          <div class="description">Расширение услуг хостинга и резервирования.</div>
+        </div>
+      </div>
+
+      <div class="item" data-aos="fade-right" data-aos-delay="200">
+        <div class="content">
+          <a class="header">Акция на подключение</a>
+          <div class="meta">25 октября 2025</div>
+          <div class="description">Скидки на годовой контракт и бесплатная настройка.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="ui inverted vertical segment" style="margin-top:2.5rem;">
+    <div class="ui container center aligned">© 2025 SmartLine</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 700 });
+  </script>
+</body>
+</html>

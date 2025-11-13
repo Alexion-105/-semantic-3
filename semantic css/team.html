@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Команда — SmartLine</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="ui inverted borderless menu top fixed">
+    <div class="ui container">
+      <a href="index.html" class="header item brand">SmartLine</a>
+      <a href="index.html" class="item">Главная</a>
+      <a href="about.html" class="item">О компании</a>
+      <a href="team.html" class="item active">Команда</a>
+      <a href="blog.html" class="item">Продукты</a>
+      <a href="contacts.html" class="item">Контакты</a>
+      <div class="right menu">
+        <div class="item"><button class="ui primary button">Подключиться</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui container" style="padding-top:5.5rem;">
+    <h1 class="ui header" data-aos="fade-up">Наша команда</h1>
+    <p data-aos="fade-up" data-aos-delay="100">Профессионалы, которые создают и поддерживают инфраструктуру SmartLine.</p>
+
+    <div class="ui four stackable cards" style="margin-top:1.5rem;">
+      <div class="card" data-aos="flip-left" data-aos-delay="100">
+        <div class="image"><img src="./images/BCO.cd569515-e26c-4666-b5a2-2ef6e6bf62fe.png" alt="Алия Касымова"></div>
+        <div class="content">
+          <div class="header">Алия Касымова</div>
+          <div class="meta">Генеральный директор</div>
+          <div class="description">Эксперт по стратегии и развитию бизнеса.</div>
+        </div>
+      </div>
+
+      <div class="card" data-aos="flip-left" data-aos-delay="150">
+        <div class="image"><img src="./images/7e00286d-b16e-473d-a81c-b254d1a4c54c.png" alt="Данияр Ермеков"></div>
+        <div class="content">
+          <div class="header">Данияр Ермеков</div>
+          <div class="meta">Технический директор</div>
+          <div class="description">Отвечает за сеть и продуктовую инженерную команду.</div>
+        </div>
+      </div>
+
+      <div class="card" data-aos="flip-left" data-aos-delay="200">
+        <div class="image"><img src="./images/cee7242b-0101-4aa1-be7a-9f607b864930.png" alt="Елена Токтарова"></div>
+        <div class="content">
+          <div class="header">Елена Токтарова</div>
+          <div class="meta">Маркетинг</div>
+          <div class="description">Маркетинговые стратегии и коммуникации.</div>
+        </div>
+      </div>
+
+      <div class="card" data-aos="flip-left" data-aos-delay="250">
+        <div class="image"><img src="./images/BCO.52d2fa81-a557-40c0-a189-bacbab0b18a0.png" alt="Айдар Бекенов"></div>
+        <div class="content">
+          <div class="header">Айдар Бекенов</div>
+          <div class="meta">Менеджер по продажам</div>
+          <div class="description">Управление корпоративными контрактами и партнёрствами.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expandable bios -->
+    <div class="ui vertical segment" style="margin-top:2rem;">
+      <h3 class="ui header">Краткие биографии</h3>
+      <div class="ui styled fluid accordion" id="bios">
+        <div class="title"><i class="dropdown icon"></i> Алия Касымова — Генеральный директор</div>
+        <div class="content"><p>15 лет в телеком-индустрии, опыт вывода продуктов на рынок и управления крупными проектами.</p></div>
+
+        <div class="title"><i class="dropdown icon"></i> Данияр Ермеков — Технический директор</div>
+        <div class="content"><p>Эксперт по сетевым архитектурам, внедрению дата-центров и облачных решений.</p></div>
+
+        <div class="title"><i class="dropdown icon"></i> Елена Токтарова — Маркетинг</div>
+        <div class="content"><p>Руководит маркетинговыми кампаниями и digital-стратегией компании.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="ui inverted vertical segment" style="margin-top:2.5rem;">
+    <div class="ui container center aligned">© 2025 SmartLine</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 700 });
+    // Accordion init
+    const accordion = document.querySelectorAll('.ui.accordion');
+    if(accordion.length) $('.ui.accordion').accordion();
+  </script>
+</body>
+</html>
